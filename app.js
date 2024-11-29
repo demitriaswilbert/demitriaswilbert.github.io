@@ -7,7 +7,7 @@ let costs = new Array(10000);
 
 let updatePeriod = 100;
 
-let counters = new Array(20), current = 0;
+let counters = new Array(21), current = 0;
 
 for(let i = 0; i < counters.length; i++)
     counters[i] = 0;
