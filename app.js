@@ -23,8 +23,9 @@ let updateavg = setInterval(() => {
     let sum = 0;
     for (let i = 0; i < counters.length; i++)
         sum += counters[i];
+    sum -= counters[current];
     // sum is the amount of clicks in the last updatePeriod * counters.length milliseconds
-    let cps = sum * 1000 / (updatePeriod * counters.length)
+    let cps = sum * 1000 / (updatePeriod * (counters.length - 1))
     document.getElementById("speed").innerText = `${cps} CPS`;
 }, updatePeriod)
 
